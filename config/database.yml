@@ -26,5 +26,5 @@ production:
   pool: 5
   database: expt_app_production
   username: root
-  password: R|5f7.eP
+  password: 'R|5f7.eP'
   socket: /var/lib/mysql/mysql.sock

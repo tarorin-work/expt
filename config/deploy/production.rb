@@ -4,4 +4,4 @@
 server '118.27.34.11', user: 'expt', roles: %w{app db web}, port: 10022 
 
 #デプロイするサーバーにsshログインする鍵の情報。サーバー編で作成した鍵のパス
-set :ssh_options, keys: '~/.ssh/conoha_hoge/id_rsa'
+set :ssh_options, keys: '~/.ssh/conoha_expt/id_rsa'

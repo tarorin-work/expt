@@ -1,4 +1,4 @@
-mespace :unicorn do
+namespace :unicorn do
   task :environment do
     set :unicorn_pid,    "#{current_path}/tmp/pids/unicorn.pid"
     set :unicorn_config, "#{current_path}/config/unicorn/production.rb"
@@ -22,14 +22,15 @@ def force_stop_unicorn
     execute :kill, "$(< #{fetch(:unicorn_pid)})"
   end
 
-esc "Start unicorn server"
+desc "Start unicorn server"
   task start: :environment do
     on roles(:app) do
       start_unicorn
     end
   end
 
-task stop: :environment do
+desc "Stop unicorn server gracefully"
+ task stop: :environment do
     on roles(:app) do
       stop_unicorn
     end
