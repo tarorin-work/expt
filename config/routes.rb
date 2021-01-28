@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   get 'info/new'
   get 'info/show'
   get 'info/edit'
-  
 
-  root 'home#top'
-  
+
+  root to: 'home#top'
+
   get 'about' => "home#about"
   get 'about/agreement' => 'home#agreement'
   get 'about/constitution' => 'home#constitution'
