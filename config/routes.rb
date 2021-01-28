@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'inquiry/index'
   get 'inquiry' => "inquiry#new"
   post 'inquiry'=> "inquiry#create"
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
 
   get 'system' => "home#system"
 
-  get 'member' => "home#member"
+  get 'member' => "member#index"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
