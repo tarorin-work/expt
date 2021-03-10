@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_28_094427) do
+ActiveRecord::Schema.define(version: 2021_03_10_071514) do
 
   create_table "infos", force: :cascade do |t|
     t.text "title"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 2021_01_28_094427) do
     t.text "name"
     t.text "introduction"
     t.text "user_page"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.text "s_contents"
+    t.integer "month"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
