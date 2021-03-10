@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'about/constitution' => 'home#constitution'
 
   get 'seminar' => "home#seminar"
-  get 'seminar/schedule' => "home#schedule"
+  get 'seminar/schedule' => "schedule#index"
   get 'seminar/kyujitsu' => "home#weekend"
   get 'seminar/heijitsu' => "home#weekday"
   get 'seminar/jissen' => "home#practice"
